@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "server"
+    }
+  ],
+  "settings": {
+    "editor.defaultFormatter": "ms-dotnettools.csdevkit",
+    "editor.formatOnSave": true
+  }
+}

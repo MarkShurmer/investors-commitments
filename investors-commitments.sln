@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvCommitsApi", "server\InvCommitsApi.csproj", "{4A1487A9-933B-DB7A-B973-A3FDCF5BD24B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A1487A9-933B-DB7A-B973-A3FDCF5BD24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1487A9-933B-DB7A-B973-A3FDCF5BD24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A1487A9-933B-DB7A-B973-A3FDCF5BD24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A1487A9-933B-DB7A-B973-A3FDCF5BD24B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7F95DB6-2EAD-4FA3-851E-820CD2836AC1}
+	EndGlobalSection
+EndGlobal
