@@ -1,20 +1,21 @@
 using Microsoft.EntityFrameworkCore;
 
-class DataContext : DbContext
+public class DataContext : DbContext
 {
-
+    public DbSet<Investment> Investments { get; set; }
     public string DbPath { get; }
 
-    public DataContext(DbContextOptions<DataContext> options)
-        : base(options)
+    public DataContext()
     {
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);
-        DbPath = System.IO.Path.Join(path, "investor_data");
+        DbPath = System.IO.Path.Join("data", "investor_data");
 
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlite($"Data Source={DbPath}");
+
+    
 
 }
