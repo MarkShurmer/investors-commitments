@@ -4,14 +4,16 @@ public class Investor
     public required string Name { get; set; }
     public required string Type { get; set; }
 
-    public required string DateAdded { get; set; }
+    public required DateTime DateAdded { get; set; }
 
     public required string Address { get; set; }
 
     public decimal TotalCommitment { get; set; }
 
-    public static Investor FromInvestment(Investment inv, int amt) {
-        return new Investor {
+    public static Investor FromInvestment(Investment inv, int amt)
+    {
+        return new Investor
+        {
             Id = inv.Id,
             Name = inv.Name,
             Type = inv.Type,

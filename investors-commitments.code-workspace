@@ -1,14 +1,29 @@
 {
   "folders": [
     {
-      "path": "."
+      "path": "server"
     },
     {
-      "path": "server"
+      "path": "client"
+    },
+    {
+      "path": "server-tests"
+    },
+    {
+      "path": "manual-tests"
     }
   ],
   "settings": {
     "editor.defaultFormatter": "ms-dotnettools.csdevkit",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "[csharp]": {
+      "editor.defaultFormatter": "ms-dotnettools.csharp"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "vscode.css-language-features"
+    }
   }
 }
