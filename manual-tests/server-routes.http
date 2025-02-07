@@ -1,5 +1,11 @@
+###
+
 GET http://localhost:5219
 
 ###
 
 GET http://localhost:5219/investors
+
+###
+
+GET http://localhost:5219/investor/4

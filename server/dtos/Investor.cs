@@ -9,17 +9,4 @@ public class Investor
     public required string Address { get; set; }
 
     public decimal TotalCommitment { get; set; }
-
-    public static Investor FromInvestment(Investment inv, int amt)
-    {
-        return new Investor
-        {
-            Id = inv.Id,
-            Name = inv.Name,
-            Type = inv.Type,
-            DateAdded = inv.DateAdded,
-            Address = inv.Country,
-            TotalCommitment = amt
-        };
-    }
 }
