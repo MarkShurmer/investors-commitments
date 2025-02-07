@@ -1,13 +1,13 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
 
 public class InvestorHandlers
 {
 
-    public static List<Investor> GetInvestors(DataContext db)
+    public static List<Investor> GetInvestors(IInvestmentService service)
     {
-        var investors = from inv in db.Investments
+        var investors = from inv in service.GetInvestments()
                         group inv by inv.Name into g
                         select new Investor()
                         {
