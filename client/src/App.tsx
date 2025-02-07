@@ -1,17 +1,16 @@
-import { useState } from 'react'
-
-import './App.css'
+import { Route, Routes } from "react-router";
+import { InvestorsPage } from "./Investors/InvestorsPage";
+import styles from "./App.module.css";
 
 function App() {
-  
-
   return (
-    <>
-      <h1>Investors and the commitments</h1>
-
-      
-    </>
-  )
+    <section className={styles.container}>
+      <h1>Investors and the commitments application</h1>
+      <Routes>
+        <Route path="/" element={<InvestorsPage />} />
+      </Routes>
+    </section>
+  );
 }
 
-export default App
+export default App;
