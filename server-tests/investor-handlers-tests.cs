@@ -9,17 +9,14 @@ public class InvestorHandlerTests
     [SetUp]
     public void Setup()
     {
-
-
     }
 
     [Test]
     public void EmptyCollectionGivesCorrectResult()
     {
         // Arrange
-        var investments = new List<Investment>();
         var mockService = new Mock<IInvestmentService>();
-        mockService.Setup(x => x.GetInvestments()).Returns(investments);
+        mockService.Setup(x => x.GetInvestments()).Returns(new List<Investment>());
 
         // Act
         var result = InvestorHandlers.GetInvestors(mockService.Object);
@@ -32,32 +29,8 @@ public class InvestorHandlerTests
     public void CollectionGivesCorrectResultForOneInvestor()
     {
         // Arrange
-        var investments = new List<Investment>() {
-            new Investment() {
-                Id = 1,
-                Name = "Investor 1",
-                Type = "Test",
-                DateAdded = DateTime.Now,
-                LastUpdated = DateTime.Now,
-                Country = "Test",
-                Amount = 100,
-                AssetClass = "Test",
-                Currency = "GBP"
-            },  new Investment() {
-                Id = 2,
-                Name = "Investor 1",
-                Type = "Test",
-                DateAdded = DateTime.Now,
-                LastUpdated = DateTime.Now,
-                Country = "Test",
-                Amount = 500,
-                AssetClass = "Test",
-                Currency = "GBP"
-            }
-
-        };
         var mockService = new Mock<IInvestmentService>();
-        Mock.Get(mockService.Object).Setup(x => x.GetInvestments()).Returns(investments);
+        Mock.Get(mockService.Object).Setup(x => x.GetInvestments()).Returns(InvestmentMocks.GetInvestmentsSameInvestor());
 
         // Act
         var result = InvestorHandlers.GetInvestors(mockService.Object);
@@ -72,42 +45,8 @@ public class InvestorHandlerTests
     public void CollectionGivesCorrectResultForTwoInvestor()
     {
         // Arrange
-        var investments = new List<Investment>() {
-            new Investment() {
-                Id = 1,
-                Name = "Investor 1",
-                Type = "Test",
-                DateAdded = DateTime.Now,
-                LastUpdated = DateTime.Now,
-                Country = "Test",
-                Amount = 100,
-                AssetClass = "Test",
-                Currency = "GBP"
-            },  new Investment() {
-                Id = 2,
-                Name = "Investor 1",
-                Type = "Test",
-                DateAdded = DateTime.Now,
-                LastUpdated = DateTime.Now,
-                Country = "Spain",
-                Amount = 500,
-                AssetClass = "Test",
-                Currency = "GBP"
-            },  new Investment() {
-                Id = 2,
-                Name = "Investor 2",
-                Type = "Test",
-                DateAdded = DateTime.Now,
-                LastUpdated = DateTime.Now,
-                Country = "UK",
-                Amount = 1500,
-                AssetClass = "Test",
-                Currency = "GBP"
-            }
-
-        };
         var mockService = new Mock<IInvestmentService>();
-        Mock.Get(mockService.Object).Setup(x => x.GetInvestments()).Returns(investments);
+        Mock.Get(mockService.Object).Setup(x => x.GetInvestments()).Returns(InvestmentMocks.GetInvestmentsDifferentInvestors());
 
         // Act
         var result = InvestorHandlers.GetInvestors(mockService.Object);
