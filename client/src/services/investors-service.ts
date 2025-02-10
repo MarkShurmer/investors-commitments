@@ -1,4 +1,4 @@
-import { Investor } from "../Investors/investor-types";
+import { Investor } from "../common/types";
 
 export async function fetchInvestors(): Promise<Array<Investor>> {
 

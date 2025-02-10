@@ -6,3 +6,5 @@ export type Investor = {
     address: string;
     totalCommitment: number;
 };
+
+export type Commitment = {   id: number; assetClass: string; amount: number; currency: string; };  
