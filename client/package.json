@@ -11,9 +11,9 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/react": "^16.2.0",
+   
     "date-fns": "^4.1.0",
+    "lodash.groupby": "^4.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^7.1.5",
@@ -21,17 +21,23 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/user-event": "^14.6.1",
+     "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.2.0",
+    "@types/lodash": "^4.17.15",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
+    "@vitest/coverage-v8": "3.0.5",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "jsdom": "^26.0.0",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5",
+    "partial-mock": "^1.1.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
     "vitest": "^3.0.5"
   }
 }

@@ -1,23 +1,37 @@
 import { describe, expect, it, vi } from "vitest";
-import { screen } from "@testing-library/react";
-import { mockInvestors } from "./__mocks__/investors";
+import { render, screen } from "@testing-library/react";
+import { mockInvestors } from "./__mocks__/mock-investors";
 import { InvestorsPage } from "./InvestorsPage";
-import { fetchInvestors } from "../loaders/investors-loader";
-import { renderWithRouter } from "../test-utils/custom-render";
+import { fetchInvestors } from "../services/investors-service";
+import { createRoutesStub } from "react-router";
 
-vi.mock("../loaders/investors-loader");
+vi.mock("../services/investors-service");
 
 describe("Investors Page", () => {
   it("should show header", async () => {
     vi.mocked(fetchInvestors).mockResolvedValueOnce(mockInvestors);
-    renderWithRouter(<InvestorsPage />);
+    const Stub = createRoutesStub([
+      {
+        path: "/",
+        Component: InvestorsPage,
+      },
+    ]);
+
+    render(<Stub initialEntries={["/"]} />);
 
     expect(screen.getByText("Investors")).toBeInTheDocument();
   });
 
   it("should show table and both mock entries", async () => {
     vi.mocked(fetchInvestors).mockResolvedValueOnce(mockInvestors);
-    renderWithRouter(<InvestorsPage />);
+    const Stub = createRoutesStub([
+      {
+        path: "/",
+        Component: InvestorsPage,
+      },
+    ]);
+
+    render(<Stub initialEntries={["/"]} />);
 
     expect(await screen.findByText("John Doe")).toBeInTheDocument();
     expect(screen.getByText("The bank")).toBeInTheDocument();
@@ -25,7 +39,14 @@ describe("Investors Page", () => {
 
   it("should show link for each investor", async () => {
     vi.mocked(fetchInvestors).mockResolvedValueOnce(mockInvestors);
-    renderWithRouter(<InvestorsPage />);
+    const Stub = createRoutesStub([
+      {
+        path: "/",
+        Component: InvestorsPage,
+      },
+    ]);
+
+    render(<Stub initialEntries={["/"]} />);
 
     const links = (await screen.findAllByRole("link")) as Array<HTMLLinkElement>;
 

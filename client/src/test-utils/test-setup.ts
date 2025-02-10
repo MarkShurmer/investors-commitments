@@ -9,3 +9,4 @@ afterEach(() => {
 
 // Mock global fetch function for testing
 window.fetch = vi.fn();
+

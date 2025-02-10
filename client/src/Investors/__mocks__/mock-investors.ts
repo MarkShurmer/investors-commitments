@@ -1,4 +1,4 @@
-import { Investor } from "../investor-types";
+import { Investor } from "../../common/types";
 
 export const mockInvestors: Array<Investor> = [
   {

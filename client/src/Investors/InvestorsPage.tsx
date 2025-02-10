@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./Investors.module.css";
-import { Investor } from "./investor-types";
-import { summariseNumber } from "../common/number-summeriser";
-import { fetchInvestors } from "../loaders/investors-loader";
+import { Investor } from "../common/types";
+import { summariseNumber } from "../common/number-summariser";
+import { fetchInvestors } from "../services/investors-service";
 import { Link } from "react-router-dom";
 import { format } from "date-fns";
 

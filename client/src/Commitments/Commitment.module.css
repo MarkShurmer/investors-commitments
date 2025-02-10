@@ -1,0 +1,54 @@
+.commitmentsSection {
+    margin: 2rem 0;
+    border: #e2e2e2 1px solid;
+    padding: 0.75rem;
+    width: 100%;
+    border-radius: 0.25rem;
+}
+
+.commitmentsList {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    border-collapse: collapse;
+    width: 100%;
+    font-weight: 600;
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+}
+
+.commitmentsList th,
+.commitmentsList td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.commitmentsList td {
+    border-top: #e2e2e2 1px solid;
+}
+
+.commitmentsList th {
+    background-color: #f2f2f2;
+    font-weight: 900;
+}
+
+.commitmentFilter {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.commitmentFilterItem {
+    background-color: #fff;
+    border: #949494 solid 1px;
+}
+
+.commitmentFilterItemActive {
+    background-color: #f0f0f0;
+    font-weight: 600;
+    border: #949494 solid 1px;
+}

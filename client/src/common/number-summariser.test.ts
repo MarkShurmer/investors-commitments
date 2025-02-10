@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import { summariseNumber } from './number-summeriser';
+import { summariseNumber } from './number-summariser';
 
 describe('Number summariser', () => {
     it('should turn a number in millions into a string with M', () => {
